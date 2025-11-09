@@ -148,36 +148,31 @@
     </div>
 </section>
 
-    <section id="join">
-        <div class="container">
-            <h2 class="section-title"><span>05</span>Join the Squad</h2>
-            <form class="contact-form animate-in">
-                <div class="form-group">
-                    <input type="text" name="ingame-id" placeholder="Your In-Game ID" required>
-                    <input type="text" name="discord" placeholder="Your Discord#0000" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Why do you want to join?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Application</button>
-            </form>
-        </div>
-    </section>
+<form class="contact-form animate-in" onsubmit="redirectToInstagram(event)">
+  <div class="form-group">
+    <input type="text" id="ingame-id" name="ingame-id" placeholder="Your In-Game ID" required>
+    <input type="text" id="discord" name="discord" placeholder="Your Discord#0000" required>
+  </div>
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+  </div>
+  <div class="form-group">
+    <textarea id="message" name="message" placeholder="Why do you want to join?"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send Application</button>
+</form>
 <section id="socials" class="social-section">
   <h3 class="section-title">🌐 Follow Me</h3>
   <p class="social-text">Catch my latest clips, match highlights, and gaming moments!</p>
 
   <div class="social-links">
-    <!-- TikTok -->
+    
     <a href="https://www.tiktok.com/@adnan_shah_offical?_r=1&_t=ZS-91FuwljyhFt" target="_blank" class="social-btn tiktok">
       <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" />
       TikTok
     </a>
 
-    <!-- Instagram -->
+   
     <a href="https://www.instagram.com/adnan_shah_offical1?igsh=Zjk0bGNuNnQ4a3Jz" target="_blank" class="social-btn instagram">
       <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" />
       Instagram
@@ -193,3 +188,4 @@
 </body>
 
 </html>
+
