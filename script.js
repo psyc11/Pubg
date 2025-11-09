@@ -89,4 +89,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statsSection) {
         counterObserver.observe(statsSection);
     }
+
 });
+
+function redirectToInstagram(event) {
+  event.preventDefault();
+
+  // Collect form data
+  const id = document.getElementById("ingame-id").value.trim();
+  const discord = document.getElementById("discord").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const msg = document.getElementById("message").value.trim();
+
+  // Format the text
+  const text = 
+    `PUBG Squad Application:%0A%0A` +
+    `🎮 In-Game ID: ${id}%0A` +
+    `💬 Discord: ${discord}%0A` +
+    `📧 Email: ${email}%0A` +
+    `📝 Reason: ${msg}%0A%0A` +
+    `Sent via Squad Join Form`;
+
+  // Save the text to clipboard
+  navigator.clipboard.writeText(decodeURIComponent(text))
+    .then(() => {
+      alert("✅ Your application details were copied! Please paste them in the Instagram DM.");
+      
+      // Detect platform and open Instagram
+      const instagramUsername = "yourusername"; // Replace with yours
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android|iPad|iPhone|iPod/i.test(userAgent)) {
+        window.location.href = `instagram://user?username=${instagramUsername}`;
+      } else {
+        window.open(`https://www.instagram.com/${instagramUsername}/`, "_blank");
+      }
+    })
+    .catch(err => {
+      alert("❌ Unable to copy automatically. Please copy your message manually.");
+    });
+}
