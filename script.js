@@ -116,7 +116,7 @@ function redirectToInstagram(event) {
       alert("✅ Your application details were copied! Please paste them in the Instagram DM.");
       
       // Detect platform and open Instagram
-      const instagramUsername = "yourusername"; // Replace with yours
+      const instagramUsername = "adnan_shah_offical1"; // Replace with yours
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/android|iPad|iPhone|iPod/i.test(userAgent)) {
